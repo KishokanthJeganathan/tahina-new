@@ -1,13 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
-
 const BlogPost = ({ data }) => (
-	<Layout>
+	<div>
 		{console.log(data)}
 		{/* <h1>{data.contentfulPost.title}</h1> */}
-	</Layout>
+	</div>
 );
 
 export const query = graphql`
