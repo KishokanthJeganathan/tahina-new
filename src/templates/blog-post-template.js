@@ -24,6 +24,17 @@ export const BlogPost = ({ data }) => {
 		readingTime
 	} = data.contentfulAddBlogPost;
 
+	const {
+		newsletterBtnText,
+		newsletterCallToAction,
+		newsletterConsentText,
+		newsletterEmailAddressPlaceholder,
+		newsletterFirstNamePlaceholder,
+		newsletterLastNamePlaceholder,
+		newsletterMobilePlaceholder,
+		newsletterTitle
+	} = data.contentfulHomePage;
+
 	const options = {
 		renderMark: {
 			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>
@@ -93,7 +104,17 @@ export const BlogPost = ({ data }) => {
 						<SocialSharing slug={slug} />
 					</Col>
 					<Col xs={12} md={8}>
-						<NewsLetter border="1px solid black" />
+						<NewsLetter
+							border="1px solid black"
+							newsletterTitle={newsletterTitle}
+							newsletterCTA={newsletterCallToAction}
+							consentText={newsletterConsentText}
+							firstName={newsletterFirstNamePlaceholder}
+							lastName={newsletterLastNamePlaceholder}
+							emailAddress={newsletterEmailAddressPlaceholder}
+							mobile={newsletterMobilePlaceholder}
+							btnText={newsletterBtnText}
+						/>
 					</Col>
 				</Row>
 			</Col>
@@ -120,6 +141,16 @@ export const query = graphql`
 				}
 				json
 			}
+		}
+		contentfulHomePage(node_locale: { eq: $locale }) {
+			newsletterBtnText
+			newsletterCallToAction
+			newsletterConsentText
+			newsletterEmailAddressPlaceholder
+			newsletterFirstNamePlaceholder
+			newsletterLastNamePlaceholder
+			newsletterMobilePlaceholder
+			newsletterTitle
 		}
 	}
 `;
