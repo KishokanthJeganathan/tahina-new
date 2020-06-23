@@ -1,14 +1,140 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import Layout from '../components/global/layout/Layout';
 import { injectIntl } from 'gatsby-plugin-intl';
+import HeroImage from '../components/index-page/HeroImage/HeroImage';
+import AboutUs from '../components/index-page/aboutUs/AboutUs';
+import Menu from '../components/index-page/menu/Menu';
+import TahinaPrivate from '../components/index-page/tahinaPrivate/TahinaPrivate';
+import Philosophy from '../components/index-page/philosophy/Philosophy';
+import Team from '../components/index-page/team/Team';
+import NewsLetter from '../components/global/newsLetter/NewsLetter';
+import Instagram from '../components/index-page/instagram/Instagram';
+import Blog from '../components/index-page/blog/Blog';
 
-const IndexPage = ({ data, intl }) => <Layout>{console.log(data)}</Layout>;
+const IndexPage = ({ data }) => {
+	const {
+		coverImage: { coverImageAlt, coverImageSrc },
+		aboutUsText: { aboutUsText },
+		aboutUsTitle,
+		ourPhilosophyImage: { ourPhilosophyImageAlt, ourPhilosophyImageSrc },
+		ourPhilosophyLink,
+		ourPhilosophyTitle,
+		ourPhilosophyText: { ourPhilosophyText },
+		menuImage: { menuImageAlt, menuImageSrc },
+		menuLink,
+		menuText: { menuText },
+		menuTitle,
+		tahinaPrivateImage: { tahinaPrivateImageAlt, tahinaPrivateImageSrc },
+		tahinaPrivateLink,
+		tahinaPrivateText: { tahinaPrivateText },
+		tahinaPrivateTitle,
+		theteamText: { theTeam },
+		theTeamTitle,
+		theTeamLink,
+		theTeamImage: { theTeamImageAlt, theTeamImageSrc },
+		ourBlogImage: { ourBlogImageAlt, ourBlogImageSrc },
+		ourBlogLink,
+		ourBlogText: { ourBlogText },
+		ourBlogTitle,
+		newsletterBtnText,
+		newsletterCallToAction,
+		newsletterConsentText,
+		newsletterEmailAddressPlaceholder,
+		newsletterFirstNamePlaceholder,
+		newsletterLastNamePlaceholder,
+		newsletterMobilePlaceholder,
+		newsletterTitle,
+		menuBtnText,
+		ourBlogBtnText,
+		ourPhilosophyBtnText,
+		tahinaPrivateBtnText,
+		theTeamBtnText
+	} = data.allContentfulHomePage.nodes[0];
+
+	console.log(data);
+
+	return (
+		<Layout textColor="white">
+			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />
+			<AboutUs title={aboutUsTitle} content={aboutUsText} />
+			<Philosophy
+				title={ourPhilosophyTitle}
+				content={ourPhilosophyText}
+				image={ourPhilosophyImageSrc}
+				bgColor="#e7eaec"
+				link={ourPhilosophyLink}
+				alt={ourPhilosophyImageAlt}
+				btnText={ourPhilosophyBtnText}
+			/>
+			<Menu
+				title={menuTitle}
+				content={menuText}
+				image={menuImageSrc}
+				link={menuLink}
+				alt={menuImageAlt}
+				bgColor="#0eb398b9"
+				btnText={menuBtnText}
+			/>
+			<TahinaPrivate
+				title={tahinaPrivateTitle}
+				content={tahinaPrivateText}
+				image={tahinaPrivateImageSrc}
+				link={tahinaPrivateLink}
+				alt={tahinaPrivateImageAlt}
+				bgColor="#938051b6"
+				btnText={tahinaPrivateBtnText}
+			/>
+			<Team
+				title={theTeamTitle}
+				content={theTeam}
+				image={theTeamImageSrc}
+				link={theTeamLink}
+				alt={theTeamImageAlt}
+				bgColor="#e7eaec"
+				btnText={theTeamBtnText}
+			/>
+			<Blog
+				title={ourBlogTitle}
+				content={ourBlogText}
+				image={ourBlogImageSrc}
+				link={ourBlogLink}
+				alt={ourBlogImageAlt}
+				bgColor="#0eb398b9"
+				btnText={ourBlogBtnText}
+			/>
+			<NewsLetter
+				newsletterTitle={newsletterTitle}
+				newsletterCTA={newsletterCallToAction}
+				consentText={newsletterConsentText}
+				firstName={newsletterFirstNamePlaceholder}
+				lastName={newsletterLastNamePlaceholder}
+				emailAddress={newsletterEmailAddressPlaceholder}
+				mobile={newsletterMobilePlaceholder}
+				btnText={newsletterBtnText}
+			/>
+			<Instagram />
+		</Layout>
+	);
+};
 
 export const query = graphql`
 	query ContentfulHomePage($locale: String) {
 		allContentfulHomePage(filter: { node_locale: { eq: $locale } }) {
 			nodes {
+				newsletterBtnText
+				newsletterCallToAction
+				newsletterConsentText
+				newsletterEmailAddressPlaceholder
+				newsletterFirstNamePlaceholder
+				newsletterLastNamePlaceholder
+				newsletterMobilePlaceholder
+				newsletterTitle
+				menuBtnText
+				ourBlogBtnText
+				ourPhilosophyBtnText
+				tahinaPrivateBtnText
+				theTeamBtnText
 				coverImage {
 					coverImageSrc: fluid(maxWidth: 2000, quality: 100) {
 						...GatsbyContentfulFluid

@@ -3,17 +3,24 @@ import { Col, Row } from 'react-bootstrap';
 import styles from '../newsLetter/newsLetter.module.css';
 import textHolderStyles from '../../index-page/textHolder/textHolder.module.css';
 
-export default function NewsLetter({ border }) {
+export default function NewsLetter({
+	border,
+	newsletterTitle,
+	newsletterCTA,
+	consentText,
+	firstName,
+	lastName,
+	emailAddress,
+	mobile,
+	btnText
+}) {
 	return (
 		<section className={styles.newsletterHolder} style={{ border: border }}>
 			<Col>
 				<Row className={styles.newsletter}>
 					<Col xs={12} md={8} className={styles.cta}>
-						<h2>LET'S STAY IN TOUCH</h2>
-						<p className={textHolderStyles.content}>
-							WHO SAYS THERE IS NO SUCH THING AS A FREE LUNCH? WE CHOOSE A LUCKY WINNER EVERY MONTH FOR A
-							100 PLN TAHINA GIFT CARD!
-						</p>
+						<h2>{newsletterTitle}</h2>
+						<p className={textHolderStyles.content}>{newsletterCTA}</p>
 					</Col>
 					<Col xs={12}>
 						<form
@@ -29,11 +36,11 @@ export default function NewsLetter({ border }) {
 									<label htmlFor="first_name" />
 									<input
 										id="first_name"
-										maxlength="40"
+										maxLength="40"
 										name="first_name"
 										size="20"
 										type="text"
-										placeholder="FIRST NAME"
+										placeholder={firstName}
 										className={styles.input}
 									/>
 								</Col>
@@ -41,11 +48,11 @@ export default function NewsLetter({ border }) {
 									<label htmlFor="last_name" />
 									<input
 										id="last_name"
-										maxlength="80"
+										maxLength="80"
 										name="last_name"
 										size="20"
 										type="text"
-										placeholder="LAST NAME"
+										placeholder={lastName}
 										className={styles.input}
 									/>
 								</Col>
@@ -53,11 +60,11 @@ export default function NewsLetter({ border }) {
 									<label htmlFor="email" />
 									<input
 										id="email"
-										maxlength="80"
+										maxLength="80"
 										name="email"
 										size="20"
 										type="text"
-										placeholder="EMAIL"
+										placeholder={emailAddress}
 										className={styles.input}
 									/>
 								</Col>
@@ -65,11 +72,11 @@ export default function NewsLetter({ border }) {
 									<label htmlFor="mobile" />
 									<input
 										id="mobile"
-										maxlength="40"
+										maxLength="40"
 										name="mobile"
 										size="20"
 										type="text"
-										placeholder="MOBILE"
+										placeholder={mobile}
 										className={styles.input}
 									/>
 								</Col>
@@ -81,10 +88,13 @@ export default function NewsLetter({ border }) {
 										type="checkbox"
 										value="1"
 										className={styles.consentButton}
-									/>I consent to provide my information as per the privacy policy
+									/>
+									{consentText}
 								</Col>
 								<Col xs={12} className={styles.submit}>
-									<input type="submit" name="submit" className={styles.submitButton} />
+									<button type="submit" name="submit" className={styles.submitButton}>
+										{btnText}
+									</button>
 								</Col>
 							</Row>
 						</form>

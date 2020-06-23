@@ -1,0 +1,48 @@
+.CTA,
+.hashtag {
+	text-align: center;
+}
+
+.CTA {
+	margin-bottom: 1rem;
+}
+
+.hashtag {
+	letter-spacing: 0.1rem;
+}
+
+.holder {
+	background-color: #e7eaec;
+	padding: 1rem;
+	padding-bottom: 2rem;
+}
+
+.link,
+.link:hover {
+	color: black;
+	letter-spacing: 0.1rem;
+}
+
+@media only screen and (min-device-width: 320px) {
+	.instagram {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 576px) {
+	.image-2,
+	.image-3,
+	.image-4 {
+		display: none;
+	}
+
+	.instagram {
+		padding: 0rem 3rem;
+	}
+}
+@media only screen and (min-device-width: 577px) and (max-device-width: 769px) {
+	.image-3,
+	.image-4 {
+		display: none;
+	}
+}

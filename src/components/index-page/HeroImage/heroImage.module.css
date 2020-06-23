@@ -1,0 +1,98 @@
+.heroImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	height: 105vh;
+	background-color: rgba(0, 0, 0, 0.315);
+}
+
+.brand {
+	font-size: 4rem;
+	text-align: center;
+	letter-spacing: 2rem;
+}
+
+.link-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.link {
+	color: white;
+	background-color: transparent;
+	border: none;
+}
+
+.link:hover {
+	color: white;
+}
+
+@media only screen and (max-device-width: 425px) {
+	.brand {
+		letter-spacing: 0.4rem;
+	}
+
+	.link {
+		color: white;
+		margin: 0rem 0.6rem;
+		font-size: 1rem;
+	}
+	.link-holder {
+		padding: 0;
+	}
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 577px) {
+	.brand {
+		letter-spacing: 0.8rem;
+	}
+
+	.link {
+		color: white;
+		margin: 0rem 0.8rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (min-device-width: 578px) and (max-device-width: 768px) {
+	.brand {
+		letter-spacing: 1.4rem;
+	}
+
+	.link {
+		color: white;
+		margin: 0rem 1.8rem;
+		font-size: 1.1rem;
+	}
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.link {
+		color: white;
+		margin: 0rem 2.2rem;
+		font-size: 1.1rem;
+	}
+}
+
+@media only screen and (min-device-width: 993px) and (max-device-width: 1300px) {
+	.link {
+		color: white;
+		margin: 0rem 2.1rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media only screen and (min-device-width: 1301px) {
+	.brand {
+		font-size: 8rem;
+		text-align: center;
+		letter-spacing: 2rem;
+	}
+
+	.link {
+		color: white;
+		margin: 0rem 2.4rem;
+		font-size: 1.6rem;
+	}
+}

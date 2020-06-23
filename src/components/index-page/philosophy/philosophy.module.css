@@ -1,0 +1,13 @@
+@media only screen and (max-device-width: 768px) {
+	.row {
+		display: flex;
+	}
+
+	.img {
+		order: 1;
+	}
+
+	.text {
+		order: 2;
+	}
+}

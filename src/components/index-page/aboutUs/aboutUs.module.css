@@ -1,0 +1,19 @@
+.text-holder {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+
+@media only screen and (max-device-width: 425px) {
+	.content {
+		font-size: 0.9rem;
+	}
+}
+
+@media only screen and (min-device-width: 426px) {
+	.content {
+		font-size: 1.1rem;
+	}
+}

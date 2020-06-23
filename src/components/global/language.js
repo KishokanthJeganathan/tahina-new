@@ -20,7 +20,7 @@ const Language = () => (
 						key={language}
 						onClick={(e) => languageClick(e, language)}
 						href="/"
-						style={{ padding: '0.1rem', color: 'black' }}
+						style={{ padding: '0.1rem', color: 'white', textShadow: '0px 0px 5px black' }}
 					>
 						{languageName[language]}
 					</a>
