@@ -52,8 +52,6 @@ const IndexPage = ({ data }) => {
 		theTeamBtnText
 	} = data.allContentfulHomePage.nodes[0];
 
-	console.log(data);
-
 	return (
 		<Layout textColor="white">
 			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />

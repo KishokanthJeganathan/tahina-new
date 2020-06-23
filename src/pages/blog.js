@@ -7,7 +7,6 @@ import BlogSnippet from '../components/blog-page/blogSnippet/BlogSnippet';
 import styles from '../components/page-css/blog.module.css';
 
 const Blog = ({ data }) => {
-	console.log(data.allContentfulAddBlogPost.edges);
 	return (
 		<Layout textColor="white">
 			<Col xs={12}>

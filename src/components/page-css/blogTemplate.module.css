@@ -1,0 +1,47 @@
+.cover-image-holder {
+	padding: 0;
+}
+
+.cover-image {
+	margin-top: -5rem;
+	height: 40vh;
+}
+
+.content-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	border: 1px solid black;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.post-info {
+	margin: 1rem 0rem;
+}
+
+.p {
+	margin: 1rem 0rem;
+}
+.reading-time {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0;
+}
+
+.published-date {
+	padding: 0;
+}
+
+@media only screen and (max-device-width: 576px) {
+	.reading-time {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
