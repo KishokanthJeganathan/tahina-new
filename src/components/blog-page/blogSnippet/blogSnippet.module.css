@@ -1,5 +1,6 @@
 .blog-snippet {
 	padding-top: 1.5rem;
+	height: fit-content;
 }
 .blog-snippet-holder,
 .blog-snippet-holder:hover {
