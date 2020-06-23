@@ -10,9 +10,11 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
-
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
+		`gatsby-plugin-smoothscroll`,
+		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-styled-components`,
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
@@ -32,9 +34,25 @@ module.exports = {
 				// option to redirect to `/en` when connecting `/`
 				redirect: true
 			}
+		},
+		{
+			resolve: `gatsby-source-instagram`,
+			options: {
+				username: `8296027164`
+			}
+		},
+		{
+			resolve: `gatsby-plugin-scroll-indicator`,
+			options: {
+				// Configure color of the scroll indicator
+				color: '#0eb398b9',
+				// Height of the scroll indicator
+				height: '5px',
+				// Configure paths where the scroll indicator will appear
+				paths: [ '/blog/**' ],
+				// Configure the z-index of the indicator element
+				zIndex: `9999`
+			}
 		}
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
 	]
 };

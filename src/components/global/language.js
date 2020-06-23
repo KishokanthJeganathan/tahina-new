@@ -2,8 +2,8 @@ import React from 'react';
 import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl';
 
 const languageName = {
-	en: 'English',
-	pl: 'Polski'
+	en: 'EN-',
+	pl: 'PL'
 };
 
 const languageClick = (e, language) => {
@@ -19,13 +19,8 @@ const Language = () => (
 					<a
 						key={language}
 						onClick={(e) => languageClick(e, language)}
-						style={{
-							color: currentLocale === language ? `yellow` : `white`,
-							margin: 10,
-							textDecoration: `underline`,
-							cursor: `pointer`
-						}}
 						href="/"
+						style={{ padding: '0.1rem', color: 'black' }}
 					>
 						{languageName[language]}
 					</a>

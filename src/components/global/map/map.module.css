@@ -1,0 +1,26 @@
+.facebook {
+	color: black;
+}
+
+.facebook:hover {
+	color: black;
+}
+
+.content-holder {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+@media only screen and (min-device-width: 769px) {
+	.facebook-p {
+		text-align: right;
+	}
+
+	.phone-p {
+		text-align: left;
+	}
+}

@@ -1,0 +1,14 @@
+.name {
+	color: black;
+	padding-left: 0.7rem;
+}
+
+.name:hover {
+	color: black;
+}
+
+.holder {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+}

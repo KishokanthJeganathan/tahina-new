@@ -1,21 +1,9 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/global/layout/Layout';
 import { injectIntl } from 'gatsby-plugin-intl';
 
-const IndexPage = ({ data, intl }) => (
-	<Layout>
-		{/* {data.allContentfulPost.nodes.map((post) => {
-			return (
-				<div key={post.id}>
-					<Link to={post.path}>{post.title}</Link>
-				</div>
-			);
-		})} */}
-
-		{console.log(data)}
-	</Layout>
-);
+const IndexPage = ({ data, intl }) => <Layout>{console.log(data)}</Layout>;
 
 export const query = graphql`
 	query ContentfulHomePage($locale: String) {
