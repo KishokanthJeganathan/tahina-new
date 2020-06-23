@@ -1,0 +1,12 @@
+.blog-snippet {
+	padding-top: 1.5rem;
+}
+.blog-snippet-holder,
+.blog-snippet-holder:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.published-date {
+	margin-top: 1rem;
+}
