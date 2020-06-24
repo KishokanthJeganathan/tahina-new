@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
 				mobile={newsletterMobilePlaceholder}
 				btnText={newsletterBtnText}
 			/>
-			<Instagram />
+			{/* <Instagram /> */}
 		</Layout>
 	);
 };
