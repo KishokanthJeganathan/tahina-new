@@ -3,6 +3,7 @@ import BackgroundImage from 'gatsby-background-image';
 import styles from '../HeroImage/heroImage.module.css';
 import { Col, Row } from 'react-bootstrap';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 export default function Home({ fluid, alt }) {
 	return (
@@ -22,13 +23,13 @@ export default function Home({ fluid, alt }) {
 							</Col>
 							<Col xs={12} className={styles.linkHolder}>
 								<button className={styles.link} onClick={() => scrollTo('#philosophy')}>
-									PHILOSOPHY
+									{<FormattedMessage id="philosophy" />}
 								</button>
 								<button className={styles.link} onClick={() => scrollTo('#menu')}>
-									MENU
+									{<FormattedMessage id="menu" />}
 								</button>
 								<button className={styles.link} onClick={() => scrollTo('#contact')}>
-									CONTACT
+									{<FormattedMessage id="contact" />}
 								</button>
 							</Col>
 						</Row>

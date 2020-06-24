@@ -9,13 +9,14 @@
 	padding: 2rem;
 }
 
-.li {
+li {
 	position: relative;
 	list-style: none;
 	text-align: center;
 	display: block;
 	font-size: 3.5rem;
 	font-weight: 800;
+	color: white;
 }
 
 .link {

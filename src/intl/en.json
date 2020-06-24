@@ -4,5 +4,10 @@
 	"menu": "MENU",
 	"tahinaPrivate": "TAHINA PRIVATE",
 	"team": "TEAM",
-	"blog": "BLOG"
+	"contact": "CONTACT",
+	"blog": "BLOG",
+	"published": "Published on",
+	"readingTime": "Reading time",
+	"minutes": "minutes",
+	"madeBy": "MADE BY"
 }

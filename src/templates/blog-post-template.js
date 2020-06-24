@@ -8,6 +8,7 @@ import { MARKS, INLINES, BLOCKS } from '@contentful/rich-text-types';
 import SocialSharing from '../components/blog-page/socialSharing/SocialSharing';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import { graphql, useStaticQuery } from 'gatsby';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
 const website_url = 'https://tahina-staging.netlify.app/';
 
@@ -92,10 +93,15 @@ export const BlogPost = ({ data }) => {
 						<h1 className={styles.title}>{titleOfPost}</h1>
 						<Row className={styles.postInfo}>
 							<Col xs={12} sm={6} className={styles.publishedDate}>
-								<strong>Published: {publishedDate}</strong>
+								<strong>
+									<FormattedMessage id="published" />: {publishedDate}
+								</strong>
 							</Col>
 							<Col xs={12} sm={6} className={styles.readingTime}>
-								<strong>Reading Time: {readingTime} Minutes</strong>
+								<strong>
+									{<FormattedMessage id="readingTime" />}: {readingTime}
+									<FormattedMessage id="minutes" />
+								</strong>
 							</Col>
 						</Row>
 						{documentToReactComponents(json, options)}

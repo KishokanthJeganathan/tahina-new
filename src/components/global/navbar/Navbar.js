@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import styles from '../navbar/navbar.module.css';
 import { GiCancel } from 'react-icons/gi';
 import { AiOutlineMenu } from 'react-icons/ai';
-import Links from '../../constants/Links';
-import { v4 as uuidv4 } from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Row } from 'react-bootstrap';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery } from 'gatsby';
 import Language from '../language';
+import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
-export default function Navbar({ textColor }) {
+const Navbar = ({ textColor }) => {
 	const [ active, setActive ] = useState(false);
 
 	return (
@@ -44,13 +43,37 @@ export default function Navbar({ textColor }) {
 									}}
 								>
 									<ul className={styles.ul}>
-										{Links.map((link) => (
-											<li className={styles.li} key={uuidv4()}>
-												<Link className={styles.link} to={link.path}>
-													{link.text}
-												</Link>
-											</li>
-										))}
+										<li>
+											<Link to="/" className={styles.link}>
+												{<FormattedMessage id="home" />}
+											</Link>
+										</li>
+										<li>
+											<Link to="/" className={styles.link}>
+												{<FormattedMessage id="philosophy" />}
+											</Link>
+										</li>
+										<li>
+											<Link to="menu" className={styles.link}>
+												{<FormattedMessage id="menu" />}
+											</Link>
+										</li>
+										<li>
+											<Link to="/" className={styles.link}>
+												{<FormattedMessage id="tahinaPrivate" />}
+											</Link>
+										</li>
+										<li>
+											<Link to="/" className={styles.link}>
+												{<FormattedMessage id="team" />}
+											</Link>
+										</li>
+										<li>
+											<Link to="blog" className={styles.link}>
+												{<FormattedMessage id="blog" />}
+											</Link>
+										</li>
+
 										<li>
 											<GiCancel className={styles.cancel} onClick={() => setActive(!active)} />
 										</li>
@@ -63,4 +86,6 @@ export default function Navbar({ textColor }) {
 			</Col>
 		</header>
 	);
-}
+};
+
+export default injectIntl(Navbar);
