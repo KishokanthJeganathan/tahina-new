@@ -59,7 +59,7 @@ const Navbar = ({ textColor }) => {
 											</Link>
 										</li>
 										<li>
-											<Link to="/" className={styles.link}>
+											<Link to="tahinaprivate" className={styles.link}>
 												{<FormattedMessage id="tahinaPrivate" />}
 											</Link>
 										</li>

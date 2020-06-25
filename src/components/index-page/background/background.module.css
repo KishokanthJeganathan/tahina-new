@@ -1,5 +1,7 @@
-.link {
-	/* height: 60vh;
-	width: 100vw; */
-	/* background-color: rgba(0, 0, 0, 0.315); */
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 60vh;
 }

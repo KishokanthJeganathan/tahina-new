@@ -1,0 +1,46 @@
+/* .product-slider {
+	display: flex;
+} */
+
+.slider {
+	padding: 0;
+	margin-top: -6rem;
+}
+
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 102vh;
+	background-color: rgba(0, 0, 0, 0.315);
+	padding: 0;
+}
+
+.btn {
+	outline: none;
+	background-color: black;
+	cursor: pointer;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	display: flex;
+	align-self: flex-end;
+	padding: 0.5rem 0rem;
+}
+
+.arrow {
+	font-size: 1.4rem;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+
+	width: 100%;
+}
+
+p {
+	text-align: center;
+}
