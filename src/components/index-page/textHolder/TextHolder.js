@@ -8,11 +8,13 @@ export default function TextHolder({ content, title, bgColor, CTA, link }) {
 		<Col xs={12}>
 			<Row className={styles.textHolder} style={{ backgroundColor: bgColor }}>
 				<Col xs={12}>
-					<h2>{title}</h2>
+					<h2 className={styles.h1}>{title}</h2>
 					<p className={styles.content}>{content}</p>
-					<Link to={link} className={styles.link}>
-						{CTA}
-					</Link>
+					{CTA && (
+						<Link to={link} className={styles.link}>
+							{CTA}
+						</Link>
+					)}
 				</Col>
 			</Row>
 		</Col>

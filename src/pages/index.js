@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/global/layout/Layout';
 import { injectIntl } from 'gatsby-plugin-intl';
 import HeroImage from '../components/index-page/HeroImage/HeroImage';

@@ -4,6 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 1rem;
+	height: 100%;
 }
 
 .link {
@@ -25,6 +26,10 @@
 	.content,
 	.link {
 		font-size: 0.9rem;
+	}
+
+	.h1 {
+		font-size: 1.5rem;
 	}
 }
 

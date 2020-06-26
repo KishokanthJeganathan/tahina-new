@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../imageSlider/imageSlider.module.css';
-import Img from 'gatsby-image';
 import { Col, Row, Carousel } from 'react-bootstrap';
 import BackgroundImage from 'gatsby-background-image';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
-import heroImageStyles from '../../index-page/HeroImage/heroImage.module.css';
 
-export default function ImageSlider({ images }) {
+export default function ImageSlider({ images, marginTop, height, content, title1, title2 }) {
 	const [ products, setProducts ] = useState(images);
 	const [ productIndex, setProductIndex ] = useState(0);
 
@@ -26,20 +24,25 @@ export default function ImageSlider({ images }) {
 	};
 
 	return (
-		<Col className={styles.slider} xs={12}>
-			<BackgroundImage fluid={firstFourProducts[0].fluid} className={styles.image} style={{ height: '102vh' }}>
-				<Col className={styles.buttonGroup} xs={12}>
+		<Col className={styles.slider} xs={12} style={{ marginTop: `${marginTop}` }}>
+			<BackgroundImage
+				fluid={firstFourProducts[0].fluid}
+				className={styles.image}
+				style={{ height: `${height}` }}
+			>
+				<Col className={styles.buttonGroup} xs={12} style={{ height: `${height}` }}>
 					<button type="button" className={styles.btn} onClick={prevProduct}>
 						<BsArrowLeft className={styles.arrow} />
 					</button>
 					<Row>
 						<Col xs={12}>
-							<h1>
-								TAHINA <br />PRIVATE
+							<h1 className={styles.h1}>
+								{title1} <br />
+								{title2}
 							</h1>
 						</Col>
 						<Col xs={12}>
-							<p className={heroImageStyles.link}>FOR CELEBRATING YOUR EXCLUSIVE MOMENTS</p>
+							<p className={styles.p}>{content}</p>
 						</Col>
 					</Row>
 					<button type="button" className={styles.btn} onClick={nextProduct}>

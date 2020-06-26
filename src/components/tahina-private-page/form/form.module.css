@@ -1,0 +1,70 @@
+.form-holder {
+	margin: 2rem 0rem;
+}
+
+.input-holder {
+	display: flex;
+	justify-content: center;
+	min-height: 35vh;
+	align-items: center;
+}
+
+.input {
+	border: none;
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+.name,
+.event-date {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.more-info {
+	display: flex;
+	justify-content: center;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+}
+
+.submit-button {
+	background-color: white;
+	border: none;
+	border: 1px solid black;
+}
+
+.submit-button:hover {
+	background-color: black;
+
+	color: white;
+}
+.cta {
+	text-align: center;
+}
+.consent-button {
+	margin: 0.4rem;
+}
+
+.consent,
+.submit {
+	display: flex;
+	justify-content: center;
+}
+
+.consent {
+	text-align: center;
+}
+
+@media only screen and (max-device-width: 577px) {
+	.name,
+	.event-date,
+	.guests,
+	.telephone {
+		display: flex;
+		justify-content: center;
+	}
+}
