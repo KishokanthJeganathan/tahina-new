@@ -37,7 +37,8 @@ export default function ImageSlider({ images, marginTop, height, content, title1
 					<Row>
 						<Col xs={12}>
 							<h1 className={styles.h1}>
-								{title1} <br />
+								{title1}
+								<br />
 								{title2}
 							</h1>
 						</Col>
