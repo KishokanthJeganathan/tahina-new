@@ -66,5 +66,10 @@
 	.telephone {
 		display: flex;
 		justify-content: center;
+		margin: 0.5rem 0rem;
+	}
+
+	.consent {
+		margin: 1rem 0rem;
 	}
 }
