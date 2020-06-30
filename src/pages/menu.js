@@ -12,10 +12,7 @@ function Menu() {
 			queries: {
 				Authorization:
 					'Bearer 00D2X000001esWS!ASAAQFt1nPdywlTPnqeFBF7WSQdKKX9nKdr_oyTpajKccG5EZ03jtJJu7BS2tv2oLWhuwrc2V9WOv3tuOFHyJ0cuq8PA4rn1'
-			},
-			'Access-Control-Allow-Origin': '*',
-			Accept: 'application/json',
-			'Content-Type': 'application/json'
+			}
 		});
 
 		console.log(result.data);
