@@ -5,10 +5,9 @@ function Menu() {
 	useEffect(async () => {
 		const result = await axios({
 			method: 'get',
-			url:
-				'https://tahina-test2-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Pricebook2/01s2X000002XyrMQAS',
+			url: 'https://tahina-test2-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Order/8012X000004qzjPQAQ',
 			data: {
-				fields: 'Name'
+				fields: 'Status'
 			},
 			headers: {
 				Authorization:
