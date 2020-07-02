@@ -5,13 +5,10 @@ function Menu() {
 	useEffect(async () => {
 		const result = await axios({
 			method: 'get',
-			url: 'https://tahina-test2-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/Order/8012X000004qzjPQAQ',
-			data: {
-				fields: 'Status'
-			},
+			url: `https://tahina-test2-dev-ed.my.salesforce.com/services/data/v48.0/query?q=SELECT+Product2Id,+Product2.Name+from+Pricebookentry+WHERE+Pricebook2Id='01s2X000002X6PxQAK'`,
 			headers: {
 				Authorization:
-					'Bearer 00D2X000001esWS!ASAAQFt1nPdywlTPnqeFBF7WSQdKKX9nKdr_oyTpajKccG5EZ03jtJJu7BS2tv2oLWhuwrc2V9WOv3tuOFHyJ0cuq8PA4rn1'
+					'Bearer 00D2X000001esWS!ASAAQG1hpJDqk71EfwEsDjQEOIVpxLK6B86D8g3yhU5tlUWBtcHoZhpbCtu.kinCTNz03pmHu4xgE_WN05YihmiORJ8e01tZ'
 			}
 		});
 
