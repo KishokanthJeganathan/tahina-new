@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-function Menu() {
-	useEffect(() => {
-		const fetchData = async () => {
-			const result = await axios('https://tahina-test.herokuapp.com/');
+export default function Menu() {
+	const { register, handleSubmit } = useForm();
 
-			// setQuote(result.data);
+	const onSubmit = (data) => {
+		axios.post(`http://localhost:4000/doggos`, { data }).then((res) => {
+			console.log(res.data);
+		});
+	};
 
-			console.log(result.data);
-		};
+	return (
+		<form onSubmit={handleSubmit(onSubmit)}>
+			<input type="text" name="firstName" ref={register} />
 
-		fetchData();
-	}, []);
+			<input type="text" name="secondName" ref={register} />
 
-	return <ul />;
+			<input type="submit" />
+		</form>
+	);
 }
-
-export default Menu;
