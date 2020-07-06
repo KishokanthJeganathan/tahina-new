@@ -15,7 +15,7 @@ export default function Philosophy({ title, content, image, bgColor, link, alt, 
 					className={`${menuStyles.contentHolder} ${styles.text}`}
 					style={{ backgroundColor: bgColor }}
 				>
-					<TextHolder content={content} title={title} bgColor={bgColor} link="en/blog" CTA={btnText} />
+					<TextHolder content={content} title={title} bgColor={bgColor} link={link} CTA={btnText} />
 				</Col>
 				<Col xs={12} md={6} className={`${menuStyles.img} ${styles.img}`}>
 					<BackgroundImage fluid={image} alt={alt} style={{ height: '60vh' }} />
