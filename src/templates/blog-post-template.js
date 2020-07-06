@@ -9,6 +9,7 @@ import SocialSharing from '../components/blog-page/socialSharing/SocialSharing';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import { graphql, useStaticQuery } from 'gatsby';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
+import BackgroundImage from 'gatsby-background-image';
 
 const website_url = 'https://tahina-staging.netlify.app/';
 
@@ -87,7 +88,12 @@ export const BlogPost = ({ data }) => {
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>
-						<Img fluid={fluid} alt={title} className={styles.coverImage} />
+						<BackgroundImage
+							fluid={fluid}
+							alt={title}
+							className={styles.coverImage}
+							style={{ height: '40vh' }}
+						/>
 					</Col>
 					<Col xs={12} md={8} className={styles.blogPostContent}>
 						<h1 className={styles.title}>{titleOfPost}</h1>
