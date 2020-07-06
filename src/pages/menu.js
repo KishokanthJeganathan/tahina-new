@@ -6,7 +6,7 @@ export default function Menu() {
 	const { register, handleSubmit } = useForm();
 
 	const onSubmit = (data) => {
-		axios.post(`http://localhost:4000/doggos`, { data }).then((res) => {
+		axios.post(`https://tahina-test.herokuapp.com/doggos`, { data }).then((res) => {
 			console.log(res.data);
 		});
 	};
