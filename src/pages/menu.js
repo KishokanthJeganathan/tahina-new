@@ -3,7 +3,7 @@ import Layout from '../components/global/layout/Layout';
 import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/menu.module.css';
-// import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
+import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
 
 const Menu = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
@@ -21,13 +21,12 @@ const Menu = () => {
 			<Col>
 				<Row className={styles.menuHolder}>
 					<Col className={styles.menu} xs="11" md="8">
-						<h1>Menu</h1>
+						<h1>Tahina Menu</h1>
 						<Row>
 							{menuItems ? (
-								menuItems.records.map((item) =>
-									// <MenuItemHolder name={item.Name} price={item.UnitPrice} />
-									console.log(item)
-								)
+								menuItems.records.map((item) => (
+									<MenuItemHolder name={item.Name} price={item.UnitPrice} />
+								))
 							) : null}
 						</Row>
 					</Col>
