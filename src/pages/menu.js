@@ -12,7 +12,6 @@ const Menu = () => {
 		const fetchData = async () => {
 			const result = await axios('https://tahina-test.herokuapp.com/doggos');
 			setMenuItems(result.data);
-			console.log('state');
 		};
 		fetchData();
 	}, []);
@@ -25,11 +24,11 @@ const Menu = () => {
 						<h1>Menu</h1>
 						<Row>
 							{menuItems ? (
-								menuItems.records.map((item) => (
-									<MenuItemHolder name={item.Name} price={item.UnitPrice} />
-								))
+								menuItems.records.map((item) =>
+									// <MenuItemHolder name={item.Name} price={item.UnitPrice} />
+									console.log(item)
+								)
 							) : null}
-							{console.log('component')}
 						</Row>
 					</Col>
 				</Row>
