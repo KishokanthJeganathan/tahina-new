@@ -55,11 +55,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout textColor="white">
-			{/* <SEO
-				title="Home page"
-				description="hello I am the home page"
-				image="https://i.ibb.co/J5BCKQ1/Studio-Project.jpg"
-			/> */}
+			<SEO title="Home page" description="hello I am the home page" image="https://i.ibb.co/KWKR1T7/1.jpg" />
 			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />
 			<AboutUs title={aboutUsTitle} content={aboutUsText} />
 			<Philosophy
