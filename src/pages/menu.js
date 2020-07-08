@@ -3,7 +3,7 @@ import Layout from '../components/global/layout/Layout';
 import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/menu.module.css';
-import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
+// import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
 
 const Menu = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
