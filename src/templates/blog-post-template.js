@@ -10,6 +10,7 @@ import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import { graphql, useStaticQuery } from 'gatsby';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import BackgroundImage from 'gatsby-background-image';
+import SEO from '../components/global/seo';
 
 const website_url = 'https://tahina-staging.netlify.app/';
 
@@ -85,6 +86,12 @@ export const BlogPost = ({ data }) => {
 	const { json } = contentOfBlogPost;
 	return (
 		<Layout textColor="white">
+			<SEO
+				title="Witamy w Tahina"
+				description="W tętniącej życiem Warszawie, Tahina jest oazą smaku dla wymagających poszukiwaczy oryginalnej Arabskiej kuchni"
+				image={fluid.src}
+			/>
+
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>
@@ -142,7 +149,7 @@ export const query = graphql`
 			readingTime
 			publishedDate(formatString: "MMMM Do, YYYY")
 			blogPostCoverPicture {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
