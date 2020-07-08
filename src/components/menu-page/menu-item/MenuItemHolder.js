@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import styles from '../global/menuItemHolder.module.css';
+import styles from '../menu-item/menuItemHolder.module.css';
 
 export default function MenuItemHolder({ name, price }) {
 	return (

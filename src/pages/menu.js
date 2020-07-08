@@ -3,7 +3,7 @@ import Layout from '../components/global/layout/Layout';
 import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/menu.module.css';
-import MenuItemHolder from '../components/global/MenuItemHolder';
+import MenuItemHolder from '../components/menu-page/menu-item/MenuItemHolder';
 import { Link } from 'gatsby';
 import { TiArrowRight } from 'react-icons/ti';
 
