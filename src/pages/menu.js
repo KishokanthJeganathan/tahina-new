@@ -6,14 +6,14 @@ import styles from '../components/page-css/menu.module.css';
 import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
 
 const Menu = () => {
-	const [ menuItems, setMenuItems ] = useState('');
+	const [ menuItems, setMenuItems ] = useState(false);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios('https://tahina-test.herokuapp.com/doggos');
 			setMenuItems(result.data);
+			console.log('state');
 		};
-
 		fetchData();
 	}, []);
 
@@ -24,11 +24,12 @@ const Menu = () => {
 					<Col className={styles.menu} xs="11" md="8">
 						<h1>Menu</h1>
 						<Row>
-							{menuItems.records.map((item) => (
-								<MenuItemHolder name={item.Name} price={item.UnitPrice} />
-							))}
-
-							{console.log(menuItems)}
+							{menuItems ? (
+								menuItems.records.map((item) => (
+									<MenuItemHolder name={item.Name} price={item.UnitPrice} />
+								))
+							) : null}
+							{console.log('component')}
 						</Row>
 					</Col>
 				</Row>
