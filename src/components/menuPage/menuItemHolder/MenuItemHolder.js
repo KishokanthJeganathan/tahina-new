@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import styles from '../menuItemHolder/menuItemHolder.module.css';
+import styles from './menuItemHolder.module.css';
 
-const MenuItemHolder = ({ name, price }) => {
+export default function MenuItemHolder({ name, price }) {
 	return (
 		<Col md="6" className={styles.menuItemHolder}>
 			<Row className={styles.menuItem}>
@@ -13,6 +13,4 @@ const MenuItemHolder = ({ name, price }) => {
 			</Row>
 		</Col>
 	);
-};
-
-export default MenuItemHolder;
+}
