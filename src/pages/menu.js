@@ -3,7 +3,9 @@ import Layout from '../components/global/layout/Layout';
 import axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/menu.module.css';
-import MenuItemHolder from '../components/menu-page/menuItemHolder/menuItemHolder';
+import MenuItemHolder from '../components/menuPage/menuItemHolder/menuItemHolder';
+import { Link } from 'gatsby';
+import { TiArrowRight } from 'react-icons/ti';
 
 const Menu = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
@@ -22,6 +24,9 @@ const Menu = () => {
 				<Row className={styles.menuHolder}>
 					<Col className={styles.menu} xs="11" md="8">
 						<h1>Tahina Menu</h1>
+						<Link to="orderin" className={styles.link}>
+							Order In-store <TiArrowRight />
+						</Link>
 						<Row>
 							{menuItems ? (
 								menuItems.records.map((item) => (

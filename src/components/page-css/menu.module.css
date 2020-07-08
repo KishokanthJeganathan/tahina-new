@@ -8,3 +8,12 @@
 	text-align: center;
 	display: block;
 }
+
+.link {
+	color: black;
+	margin-bottom: 1rem;
+}
+
+.link:hover {
+	color: black;
+}
