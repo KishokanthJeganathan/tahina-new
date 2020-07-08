@@ -11,6 +11,7 @@ import Team from '../components/index-page/team/Team';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import Instagram from '../components/index-page/instagram/Instagram';
 import Blog from '../components/index-page/blog/Blog';
+import SEO from '../components/global/seo';
 
 const IndexPage = ({ data }) => {
 	const {
@@ -54,6 +55,11 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout textColor="white">
+			<SEO
+				title="Home page"
+				description="hello I am the home page"
+				image="https://i.ibb.co/J5BCKQ1/Studio-Project.jpg"
+			/>
 			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />
 			<AboutUs title={aboutUsTitle} content={aboutUsText} />
 			<Philosophy

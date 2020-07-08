@@ -1,0 +1,10 @@
+.menu-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.menu {
+	border: 1px solid black;
+	text-align: center;
+	display: block;
+}

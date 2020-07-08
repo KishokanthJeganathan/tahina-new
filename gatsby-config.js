@@ -4,9 +4,13 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`
+		title: 'Tahina',
+		titleTemplate: '%s | Tahina.pl',
+		description: 'Welcome to Tahina',
+		siteUrl: 'http://localhost:8000', // No trailing slash allowed!
+		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
+		twitterUsername: '@kishojegan',
+		author: 'Tahina'
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
