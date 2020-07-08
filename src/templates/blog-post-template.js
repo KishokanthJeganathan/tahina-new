@@ -87,7 +87,7 @@ export const BlogPost = ({ data }) => {
 	return (
 		<Layout textColor="white">
 			<SEO
-				title="Witamy w Tahina"
+				title={titleOfPost}
 				description="W tętniącej życiem Warszawie, Tahina jest oazą smaku dla wymagających poszukiwaczy oryginalnej Arabskiej kuchni"
 				image={fluid.src}
 			/>
