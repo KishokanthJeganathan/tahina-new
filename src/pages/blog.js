@@ -5,10 +5,16 @@ import Layout from '../components/global/layout/Layout';
 import { Col, Row } from 'react-bootstrap';
 import BlogSnippet from '../components/blog-page/blogSnippet/BlogSnippet';
 import styles from '../components/page-css/blog.module.css';
+import SEO from '../components/global/seo';
 
 const Blog = ({ data }) => {
 	return (
 		<Layout textColor="white">
+			<SEO
+				title="Blog"
+				description="Zapraszamy do czytania naszego bloga, gdzie piszemy o historii kuchni Bliskiego Wschodu, przyprawach, składnikach i źródłach naszych inspiracji."
+				image="https://i.ibb.co/KWKR1T7/1.jpg"
+			/>
 			<Col xs={12}>
 				<Row className={styles.blogContentHolder}>
 					<Col xs={12} className={styles.title}>

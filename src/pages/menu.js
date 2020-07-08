@@ -6,6 +6,7 @@ import styles from '../components/page-css/menu.module.css';
 import MenuItemHolder from '../components/menu-page/menu-item/MenuItemHolder';
 import { Link } from 'gatsby';
 import { TiArrowRight } from 'react-icons/ti';
+import SEO from '../components/global/seo';
 
 const Menu = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
@@ -20,6 +21,11 @@ const Menu = () => {
 
 	return (
 		<Layout textColor="white">
+			<SEO
+				title="Menu"
+				description="Przyjdź do naszego menu. Godzinami eksperymentujemy ze składnikami, aby stworzyć idealnie zbilansowany posiłek."
+				image="https://i.ibb.co/KWKR1T7/1.jpg"
+			/>
 			<Col>
 				<Row className={styles.menuHolder}>
 					<Col className={styles.menu} xs="11" md="8">
