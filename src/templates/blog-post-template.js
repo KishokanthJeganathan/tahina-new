@@ -24,7 +24,8 @@ export const BlogPost = ({ data }) => {
 		publishedDate,
 		titleOfPost,
 		slug,
-		readingTime
+		readingTime,
+		metaDescription
 	} = data.contentfulAddBlogPost;
 
 	const {
@@ -86,11 +87,7 @@ export const BlogPost = ({ data }) => {
 	const { json } = contentOfBlogPost;
 	return (
 		<Layout textColor="white">
-			<SEO
-				title={titleOfPost}
-				description="W tętniącej życiem Warszawie, Tahina jest oazą smaku dla wymagających poszukiwaczy oryginalnej Arabskiej kuchni"
-				image={fluid.src}
-			/>
+			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} />
 
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>

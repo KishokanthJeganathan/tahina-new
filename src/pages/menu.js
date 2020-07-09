@@ -24,7 +24,7 @@ const Menu = () => {
 			<SEO
 				title="Menu"
 				description="Przyjdź do naszego menu. Godzinami eksperymentujemy ze składnikami, aby stworzyć idealnie zbilansowany posiłek."
-				image="https://i.ibb.co/KWKR1T7/1.jpg"
+				image="https://i.ibb.co/1z4J7XF/Studio-Project.jpg"
 			/>
 			<Col>
 				<Row className={styles.menuHolder}>

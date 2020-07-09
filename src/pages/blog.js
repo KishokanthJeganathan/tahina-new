@@ -13,7 +13,7 @@ const Blog = ({ data }) => {
 			<SEO
 				title="Blog"
 				description="Zapraszamy do czytania naszego bloga, gdzie piszemy o historii kuchni Bliskiego Wschodu, przyprawach, składnikach i źródłach naszych inspiracji."
-				image="https://i.ibb.co/KWKR1T7/1.jpg"
+				image="https://i.ibb.co/kmWSgG7/blog-page-cover.jpg"
 			/>
 			<Col xs={12}>
 				<Row className={styles.blogContentHolder}>

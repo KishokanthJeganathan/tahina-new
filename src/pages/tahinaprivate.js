@@ -5,8 +5,6 @@ import { injectIntl } from 'gatsby-plugin-intl';
 import ImageSlider from '../components/tahina-private-page/imageSlider/ImageSlider';
 import AboutUs from '../components/index-page/aboutUs/AboutUs';
 import Philosophy from '../components/index-page/philosophy/Philosophy';
-import Menu from '../components/index-page/menu/Menu';
-import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import Form from '../components/tahina-private-page/form/Form';
 import Team from '../components/index-page/team/Team';
 import Blog from '../components/index-page/blog/Blog';
@@ -37,6 +35,7 @@ const TahinaPrivate = ({ data }) => {
 		formName,
 		formDate,
 		formTitle,
+		metaDescription,
 		formCta: { formCta },
 		bottomImages,
 		bottomImageContent: { bottomImageContent },
@@ -45,11 +44,8 @@ const TahinaPrivate = ({ data }) => {
 
 	return (
 		<Layout textColor="white">
-			<SEO
-				title="TAHINA PRYWATNA"
-				description="Miejsce, w którym możesz celebrować wyjątkowe momenty ze swoimi bliskimi w towarzystwie pysznych dań, drinków i z najlepszą obsługą."
-				image="https://i.ibb.co/KWKR1T7/1.jpg"
-			/>
+			<SEO title="TAHINA PRYWATNA" description={metaDescription} image={coverImage[0].fluid.src} />
+
 			<ImageSlider
 				images={coverImage}
 				marginTop="-6rem"
