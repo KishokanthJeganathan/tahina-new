@@ -7,10 +7,11 @@ import '@brainhubeu/react-carousel/lib/style.css';
 import Background from '../instaBackgroundImage/Background';
 import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const query = graphql`
 	query {
-		allInstaNode(limit: 5, sort: { fields: timestamp, order: DESC }) {
+		allInstaNode(limit: 4, sort: { fields: timestamp, order: DESC }) {
 			edges {
 				node {
 					timestamp
@@ -42,7 +43,7 @@ export default function Instagram() {
 							rel="noopener noreferrer"
 							className={styles.link}
 						>
-							FOLLOW US ON INSTAGRAM!
+							{<FormattedMessage id="instagram" />}
 						</a>
 					</p>
 				</Col>
@@ -50,28 +51,36 @@ export default function Instagram() {
 				<Col xs={12}>
 					<Row className={styles.imageHolder}>
 						<Col xs={8} sm={6} md={4} lg={3} className={styles.image1}>
-							<BackgroundImage
-								fluid={data.allInstaNode.edges[0].node.localFile.childImageSharp.fluid}
-								style={{ height: '30vh' }}
-							/>
+							<a href="https://www.instagram.com/tahinawilcza/" target="_blank" rel="noopener noreferrer">
+								<BackgroundImage
+									fluid={data.allInstaNode.edges[0].node.localFile.childImageSharp.fluid}
+									style={{ height: '30vh' }}
+								/>
+							</a>
 						</Col>
 						<Col xs={8} sm={6} md={4} lg={3} className={styles.image2}>
-							<BackgroundImage
-								fluid={data.allInstaNode.edges[1].node.localFile.childImageSharp.fluid}
-								style={{ height: '30vh' }}
-							/>
+							<a href="https://www.instagram.com/tahinawilcza/" target="_blank" rel="noopener noreferrer">
+								<BackgroundImage
+									fluid={data.allInstaNode.edges[1].node.localFile.childImageSharp.fluid}
+									style={{ height: '30vh' }}
+								/>
+							</a>
 						</Col>
 						<Col xs={8} sm={6} md={4} lg={3} className={styles.image3}>
-							<BackgroundImage
-								fluid={data.allInstaNode.edges[2].node.localFile.childImageSharp.fluid}
-								style={{ height: '30vh' }}
-							/>
+							<a href="https://www.instagram.com/tahinawilcza/" target="_blank" rel="noopener noreferrer">
+								<BackgroundImage
+									fluid={data.allInstaNode.edges[2].node.localFile.childImageSharp.fluid}
+									style={{ height: '30vh' }}
+								/>
+							</a>
 						</Col>
 						<Col xs={8} sm={6} md={4} lg={3} className={styles.image4}>
-							<BackgroundImage
-								fluid={data.allInstaNode.edges[3].node.localFile.childImageSharp.fluid}
-								style={{ height: '30vh' }}
-							/>
+							<a href="https://www.instagram.com/tahinawilcza/" target="_blank" rel="noopener noreferrer">
+								<BackgroundImage
+									fluid={data.allInstaNode.edges[3].node.localFile.childImageSharp.fluid}
+									style={{ height: '30vh' }}
+								/>
+							</a>
 						</Col>
 					</Row>
 				</Col>
