@@ -9,7 +9,7 @@ export default function DeveloperCredit() {
 			<p className={styles.content}>
 				{<FormattedMessage id="madeBy" />}
 				<a href="http://kishokanth.com/" target="_blank" rel="noopener noreferrer" className={styles.name}>
-					KISHOKANTH
+					Kishokanth
 				</a>
 			</p>
 		</Col>
