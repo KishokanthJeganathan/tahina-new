@@ -23,13 +23,26 @@
 	letter-spacing: 0.1rem;
 }
 
-@media only screen and (min-device-width: 320px) {
-	.instagram {
+.image-holder {
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 369px) {
+	.image-1 {
 		padding: 0;
+	}
+	.image-2,
+	.image-3,
+	.image-4 {
+		display: none;
 	}
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 576px) {
+@media only screen and (min-device-width: 370px) and (max-device-width: 576px) {
+	.image-1 {
+		padding: 0rem 2rem;
+	}
 	.image-2,
 	.image-3,
 	.image-4 {
@@ -42,6 +55,17 @@
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 769px) {
 	.image-3,
+	.image-4 {
+		display: none;
+	}
+
+	.image-1,
+	.image-2 {
+		padding: 0rem 2rem;
+	}
+}
+
+@media only screen and (min-device-width: 770px) and (max-device-width: 1024px) {
 	.image-4 {
 		display: none;
 	}

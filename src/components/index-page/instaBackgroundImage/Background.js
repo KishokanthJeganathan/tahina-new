@@ -9,7 +9,10 @@ export default function Background(props) {
 			md={props.md}
 			lg={props.lg}
 			fluid={props.src}
-			style={{ height: `${props.height}`, width: `${props.width}`, margin: '1rem' }}
+			style={{
+				height: `${props.height}`,
+				width: `${props.width}`
+			}}
 		>
 			{props.children}
 		</BackgroundImage>

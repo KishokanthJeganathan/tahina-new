@@ -6,7 +6,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 export default function DeveloperCredit() {
 	return (
 		<Col className={styles.holder}>
-			<p>
+			<p className={styles.content}>
 				{<FormattedMessage id="madeBy" />}
 				<a href="http://kishokanth.com/" target="_blank" rel="noopener noreferrer" className={styles.name}>
 					KISHOKANTH
