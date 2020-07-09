@@ -18,7 +18,7 @@ const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
 export const BlogPost = ({ data }) => {
 	const {
-		blogPostCoverPicture: { fluid, title, description },
+		blogPostCoverPicture: { fluid, title },
 		contentOfBlogPost,
 		publishedDate,
 		titleOfPost,

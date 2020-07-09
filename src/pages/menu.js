@@ -7,6 +7,8 @@ import MenuItemHolder from '../components/menu-page/menu-item/MenuItemHolder';
 import { Link } from 'gatsby';
 import { TiArrowRight } from 'react-icons/ti';
 import SEO from '../components/global/seo';
+import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const Menu = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
@@ -38,7 +40,11 @@ const Menu = () => {
 								menuItems.records.map((item) => (
 									<MenuItemHolder name={item.Name} price={item.UnitPrice} />
 								))
-							) : null}
+							) : (
+								<Col className={styles.loading}>
+									<Loader type="ThreeDots" color="#0eb398b9" height={80} width={80} />
+								</Col>
+							)}
 						</Row>
 					</Col>
 				</Row>
