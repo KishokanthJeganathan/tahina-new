@@ -96,7 +96,8 @@ const IndexPage = ({ data }) => {
 				bgColor="#e7eaec"
 				btnText={theTeamBtnText}
 			/>
-			<Blog
+
+			<TahinaPrivate
 				title={ourBlogTitle}
 				content={ourBlogText}
 				image={ourBlogImageSrc}
