@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../imageSlider/imageSlider.module.css';
-import { Col, Row, Carousel } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import BackgroundImage from 'gatsby-background-image';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 

@@ -3,7 +3,7 @@ import BackgroundImage from 'gatsby-background-image';
 import styles from '../HeroImage/heroImage.module.css';
 import { Col, Row } from 'react-bootstrap';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 export default function Home({ fluid, alt }) {
 	return (

@@ -18,7 +18,7 @@ const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
 export const BlogPost = ({ data }) => {
 	const {
-		blogPostCoverPicture: { fluid, title },
+		blogPostCoverPicture: { fluid, title, description },
 		contentOfBlogPost,
 		publishedDate,
 		titleOfPost,
@@ -87,7 +87,7 @@ export const BlogPost = ({ data }) => {
 	return (
 		<Layout textColor="white">
 			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
-			{console.log(metaDescription)}
+			{console.log(description)}
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>
@@ -142,6 +142,7 @@ export const query = graphql`
 		contentfulAddBlogPost(path: { eq: $slug }, node_locale: { eq: $locale }) {
 			path
 			titleOfPost
+			metaDescription
 			readingTime
 			publishedDate(formatString: "MMMM Do, YYYY")
 			blogPostCoverPicture {

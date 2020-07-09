@@ -56,11 +56,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout textColor="white">
-			<SEO
-				title="Witamy w Tahina"
-				description="W tętniącej życiem Warszawie, Tahina jest oazą smaku dla wymagających poszukiwaczy oryginalnej Arabskiej kuchni"
-				image={coverImageSrc.src}
-			/>
+			<SEO title="Witamy w Tahina" description={metaDescription} image={coverImageSrc.src} />
 
 			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />
 			<AboutUs title={aboutUsTitle} content={aboutUsText} />
@@ -141,6 +137,7 @@ export const query = graphql`
 				ourPhilosophyBtnText
 				tahinaPrivateBtnText
 				theTeamBtnText
+				metaDescription
 				coverImage {
 					coverImageSrc: fluid(maxWidth: 2000, quality: 100) {
 						...GatsbyContentfulFluid

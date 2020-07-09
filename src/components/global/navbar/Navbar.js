@@ -4,7 +4,7 @@ import { GiCancel } from 'react-icons/gi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Row } from 'react-bootstrap';
-import { Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import Language from '../language';
 import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
 
