@@ -92,6 +92,7 @@ export const query = graphql`
 					title
 				}
 				aboutTitle
+				metaDescription
 				aboutText
 				area1Image {
 					area1Image: fluid(maxWidth: 2000, quality: 100) {
