@@ -87,7 +87,7 @@ export const BlogPost = ({ data }) => {
 	return (
 		<Layout textColor="white">
 			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
-			{console.log(metaDescription)}
+
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>
