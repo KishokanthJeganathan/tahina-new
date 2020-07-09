@@ -24,7 +24,7 @@ export const BlogPost = ({ data }) => {
 		titleOfPost,
 		slug,
 		readingTime,
-		metDescription
+		metaDescription
 	} = data.contentfulAddBlogPost;
 
 	const {
@@ -86,8 +86,8 @@ export const BlogPost = ({ data }) => {
 	const { json } = contentOfBlogPost;
 	return (
 		<Layout textColor="white">
-			<SEO title={titleOfPost} description={metDescription} image={fluid.src} article />
-
+			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
+			{console.log(metaDescription)}
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>
@@ -156,7 +156,7 @@ export const query = graphql`
 				}
 				json
 			}
-			metDescription
+			metaDescription
 		}
 		contentfulHomePage(node_locale: { eq: $locale }) {
 			newsletterBtnText
