@@ -1,14 +1,13 @@
 import React from 'react';
 import Layout from '../components/global/layout/Layout';
-import Img from 'gatsby-image';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/blogTemplate.module.css';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { MARKS, INLINES, BLOCKS } from '@contentful/rich-text-types';
 import SocialSharing from '../components/blog-page/socialSharing/SocialSharing';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
-import { graphql, useStaticQuery } from 'gatsby';
-import { injectIntl, FormattedMessage } from 'gatsby-plugin-intl';
+import { graphql } from 'gatsby';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import BackgroundImage from 'gatsby-background-image';
 import SEO from '../components/global/seo';
 
@@ -88,7 +87,7 @@ export const BlogPost = ({ data }) => {
 	return (
 		<Layout textColor="white">
 			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
-
+			{console.log(metaDescription)}
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
 					<Col className={styles.coverImageHolder} xs={12}>

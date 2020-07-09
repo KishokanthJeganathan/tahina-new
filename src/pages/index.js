@@ -50,7 +50,8 @@ const IndexPage = ({ data }) => {
 		ourBlogBtnText,
 		ourPhilosophyBtnText,
 		tahinaPrivateBtnText,
-		theTeamBtnText
+		theTeamBtnText,
+		metaDescription
 	} = data.allContentfulHomePage.nodes[0];
 
 	return (
@@ -58,8 +59,9 @@ const IndexPage = ({ data }) => {
 			<SEO
 				title="Witamy w Tahina"
 				description="W tętniącej życiem Warszawie, Tahina jest oazą smaku dla wymagających poszukiwaczy oryginalnej Arabskiej kuchni"
-				image="https://i.ibb.co/KWKR1T7/1.jpg"
+				image={coverImageSrc.src}
 			/>
+
 			<HeroImage fluid={coverImageSrc} alt={coverImageAlt} />
 			<AboutUs title={aboutUsTitle} content={aboutUsText} />
 			<Philosophy
