@@ -87,7 +87,7 @@ export const BlogPost = ({ data }) => {
 	const { json } = contentOfBlogPost;
 	return (
 		<Layout textColor="white">
-			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} />
+			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
 
 			<Col xs={12} className={styles.blogPost}>
 				<Row className={styles.contentHolder}>
