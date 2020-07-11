@@ -9,8 +9,6 @@ import TahinaPrivate from '../components/index-page/tahinaPrivate/TahinaPrivate'
 import Philosophy from '../components/index-page/philosophy/Philosophy';
 import Team from '../components/index-page/team/Team';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
-import Instagram from '../components/index-page/instagram/Instagram';
-import Blog from '../components/index-page/blog/Blog';
 import SEO from '../components/global/seo';
 import InstagramCarousal from '../components/index-page/instagram-carousal/InstagramCarousal';
 

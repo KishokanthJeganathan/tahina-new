@@ -41,7 +41,7 @@ export default function Instagram() {
 		slidesToScroll: 4,
 		initialSlide: 0,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
 		responsive: [
 			{
 				breakpoint: 1024,
