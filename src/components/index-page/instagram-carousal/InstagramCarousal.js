@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Col, Row } from 'react-bootstrap';
-import styles from '../instagram/instagram.module.css';
+import styles from '../instagram-carousal/instagramCarousal.module.css';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Background from '../instaBackgroundImage/Background';
