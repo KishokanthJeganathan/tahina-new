@@ -11,7 +11,8 @@ export default function Background(props) {
 			fluid={props.src}
 			style={{
 				height: `${props.height}`,
-				width: `${props.width}`
+				width: `${props.width}`,
+				margin: '1rem'
 			}}
 		>
 			{props.children}

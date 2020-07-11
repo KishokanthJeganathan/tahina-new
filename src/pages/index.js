@@ -12,6 +12,7 @@ import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import Instagram from '../components/index-page/instagram/Instagram';
 import Blog from '../components/index-page/blog/Blog';
 import SEO from '../components/global/seo';
+import InstagramCarousal from '../components/index-page/instagram-carousal/InstagramCarousal';
 
 const IndexPage = ({ data }) => {
 	const {
@@ -116,7 +117,8 @@ const IndexPage = ({ data }) => {
 				mobile={newsletterMobilePlaceholder}
 				btnText={newsletterBtnText}
 			/>
-			<Instagram />
+
+			<InstagramCarousal />
 		</Layout>
 	);
 };
