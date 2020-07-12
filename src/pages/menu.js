@@ -21,6 +21,63 @@ const Menu = () => {
 		fetchData();
 	}, []);
 
+	const divideMenu = () => {
+		let Brunch = [];
+		let Napoje = [];
+		let Opakowania = [];
+		let PasteAndToppings = [];
+		let PastyNaWagę = [];
+		let Sets = [];
+		let TahinaBowl = [];
+		let TahinaDeli = [];
+		let Wraps = [];
+
+		menuItems.records.forEach((item) => {
+			if (item.Product2.Family === 'Brunch') {
+				Brunch.push(item);
+			}
+			if (item.Product2.Family === 'Napoje') {
+				Napoje.push(item);
+			}
+			if (item.Product2.Family === 'Opakowania') {
+				Opakowania.push(item);
+			}
+			if (item.Product2.Family === 'Paste and toppings') {
+				PasteAndToppings.push(item);
+			}
+			if (item.Product2.Family === 'Pasty na wagę') {
+				PastyNaWagę.push(item);
+			}
+			if (item.Product2.Family === 'Sets') {
+				Sets.push(item);
+			}
+			if (item.Product2.Family === 'Tahina Bowl') {
+				TahinaBowl.push(item);
+			}
+			if (item.Product2.Family === 'Tahina Deli') {
+				TahinaDeli.push(item);
+			} else if (item.Product2.Family === 'Wraps') {
+				Wraps.push(item);
+			}
+		});
+
+		let menu = [
+			{ item: Brunch },
+			{ item: Napoje },
+			{ item: Opakowania },
+			{ item: PasteAndToppings },
+			{ item: PastyNaWagę },
+			{ item: Sets },
+			{ item: TahinaBowl },
+			{ item: TahinaDeli },
+			{ item: Wraps }
+		];
+
+		let cleanedMenu = menu.filter((product) => product.item.length !== 0);
+
+		return <MenuItemHolder productFamily={cleanedMenu} />;
+	};
+
 	return (
 		<Layout textColor="white">
 			<SEO
@@ -30,20 +87,16 @@ const Menu = () => {
 			/>
 			<Col>
 				<Row className={styles.menuHolder}>
-					<Col className={styles.menu} xs="11" md="8">
-						<h1>Tahina Menu</h1>
-						<Link to="orderin" className={styles.link}>
+					<Col className={styles.menu} xs="12" md="8">
+						<h1 className={styles.title}>Tahina Menu</h1>
+						{/* <Link to="orderin" className={styles.link}>
 							Order In-store <TiArrowRight />
-						</Link>
+						</Link> */}
 						<Row>
 							{menuItems ? (
-								menuItems.records.map((item) => (
-									<MenuItemHolder name={item.Name} price={item.UnitPrice} />
-								))
+								divideMenu()
 							) : (
-								<Col className={styles.loading}>
-									<Loader type="ThreeDots" color="#0eb398b9" height={80} width={80} />
-								</Col>
+								<Loader type="ThreeDots" color="#0eb398b9" height={80} width={80} />
 							)}
 						</Row>
 					</Col>
