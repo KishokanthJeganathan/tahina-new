@@ -96,7 +96,9 @@ const Menu = () => {
 							{menuItems ? (
 								divideMenu()
 							) : (
-								<Loader type="ThreeDots" color="#0eb398b9" height={80} width={80} />
+								<Col className="text-center">
+									<Loader type="ThreeDots" color="#0eb398b9" height={80} width={80} />
+								</Col>
 							)}
 						</Row>
 					</Col>
