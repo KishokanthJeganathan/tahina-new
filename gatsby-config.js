@@ -13,12 +13,21 @@ module.exports = {
 		author: 'Tahina'
 	},
 	plugins: [
-		`gatsby-plugin-react-helmet`,
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
-		`gatsby-plugin-smoothscroll`,
-		`gatsby-plugin-styled-components`,
-		`gatsby-plugin-styled-components`,
+		{
+			resolve: `gatsby-plugin-gdpr-cookies`,
+			options: {
+				googleAnalytics: {
+					trackingId: 'UA-172777188-1', // leave empty if you want to disable the tracker
+					cookieName: 'gatsby-gdpr-google-analytics', // default
+					anonymize: true, // default
+					head: true,
+					respectDNT: true,
+					pageTransitionDelay: 0
+				},
+				// defines the environments where the tracking should be available  - default is ["production"]
+				environments: [ 'production', 'development' ]
+			}
+		},
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
@@ -57,6 +66,18 @@ module.exports = {
 				// Configure the z-index of the indicator element
 				zIndex: `9999`
 			}
-		}
+		},
+		{
+			resolve: `gatsby-plugin-canonical-urls`,
+			options: {
+				siteUrl: `https://www.tahina.pl`
+			}
+		},
+		`gatsby-plugin-react-helmet`,
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		`gatsby-plugin-smoothscroll`,
+		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-styled-components`
 	]
 };
