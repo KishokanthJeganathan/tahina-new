@@ -10,6 +10,8 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 import BackgroundImage from 'gatsby-background-image';
 import SEO from '../components/global/seo';
 
+const website_url = 'https://tahina.pl/';
+
 const Bold = ({ children }) => <p className={styles.bold}>{children}</p>;
 const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
