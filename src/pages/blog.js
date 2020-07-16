@@ -6,6 +6,7 @@ import { Col, Row } from 'react-bootstrap';
 import BlogSnippet from '../components/blog-page/blogSnippet/BlogSnippet';
 import styles from '../components/page-css/blog.module.css';
 import SEO from '../components/global/seo';
+import { v4 as uuidv4 } from 'uuid';
 
 const Blog = ({ data }) => {
 	return (
@@ -29,6 +30,7 @@ const Blog = ({ data }) => {
 							alt={post.node.blogPostCoverPicture.title}
 							title={post.node.titleOfPost}
 							slug={post.node.path}
+							key={uuidv4()}
 						/>
 					))}
 				</Row>

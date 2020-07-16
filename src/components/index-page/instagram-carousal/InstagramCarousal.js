@@ -8,6 +8,7 @@ import { FormattedMessage } from 'gatsby-plugin-intl';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const query = graphql`
 	query {
@@ -104,7 +105,11 @@ export default function Instagram() {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Background src={image.node.localFile.childImageSharp.fluid} height="35vh" />
+									<Background
+										src={image.node.localFile.childImageSharp.fluid}
+										height="35vh"
+										key={uuidv4()}
+									/>
 								</a>
 							</div>
 						))}
