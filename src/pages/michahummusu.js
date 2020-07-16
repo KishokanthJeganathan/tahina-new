@@ -44,7 +44,7 @@ const Michahummusu = ({ data }) => {
 
 	return (
 		<Layout textColor="white">
-			<SEO title="TAHINA PRYWATNA" description={metaDescription} image={coverImage[0].fluid.src} />
+			<SEO title="Micha Hummusu" description={metaDescription} image={coverImage[0].fluid.src} />
 
 			<ImageSlider
 				images={coverImage}
