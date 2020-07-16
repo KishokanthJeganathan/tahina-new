@@ -4,7 +4,6 @@ import { Col, Row } from 'react-bootstrap';
 import styles from '../components/page-css/blogTemplate.module.css';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { MARKS, INLINES, BLOCKS } from '@contentful/rich-text-types';
-import SocialSharing from '../components/blog-page/socialSharing/SocialSharing';
 import NewsLetter from '../components/global/newsLetter/NewsLetter';
 import { graphql } from 'gatsby';
 import { FormattedMessage } from 'gatsby-plugin-intl';
@@ -115,9 +114,7 @@ export const BlogPost = ({ data }) => {
 						</Row>
 						{documentToReactComponents(json, options)}
 					</Col>
-					<Col xs={12}>
-						<SocialSharing slug={slug} />
-					</Col>
+
 					<Col xs={12} md={8}>
 						<NewsLetter
 							border="1px solid black"

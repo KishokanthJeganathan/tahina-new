@@ -10,7 +10,7 @@ import Team from '../components/index-page/team/Team';
 import Blog from '../components/index-page/blog/Blog';
 import SEO from '../components/global/seo';
 
-const TahinaPrivate = ({ data }) => {
+const Michahummusu = ({ data }) => {
 	const {
 		coverImage,
 		coverImageContent: { coverImageContent },
@@ -154,4 +154,4 @@ export const query = graphql`
 	}
 `;
 
-export default injectIntl(TahinaPrivate);
+export default injectIntl(Michahummusu);

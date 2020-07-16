@@ -49,7 +49,10 @@ const Navbar = ({ textColor }) => {
 											</Link>
 										</li>
 										<li>
-											<Link to="/" className={styles.link}>
+											<Link
+												to="/blog/filozofia-tahiny-jak-to-sie-wszystko-zaczelo"
+												className={styles.link}
+											>
 												{<FormattedMessage id="philosophy" />}
 											</Link>
 										</li>
@@ -59,12 +62,12 @@ const Navbar = ({ textColor }) => {
 											</Link>
 										</li>
 										<li>
-											<Link to="tahinaprivate" className={styles.link}>
+											<Link to="michahummusu" className={styles.link}>
 												{<FormattedMessage id="tahinaPrivate" />}
 											</Link>
 										</li>
 										<li>
-											<Link to="/" className={styles.link}>
+											<Link to="/blog/jak-to-sie-wszytsko-zaczelo/" className={styles.link}>
 												{<FormattedMessage id="team" />}
 											</Link>
 										</li>
