@@ -1,5 +1,5 @@
 require('dotenv').config({
-	path: `.env`
+	path: `.env.${process.env.NODE_ENV}`
 });
 
 module.exports = {
@@ -17,7 +17,9 @@ module.exports = {
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
 				googleAnalytics: {
-					trackingId: 'UA-172777188-1', // leave empty if you want to disable the tracker
+					trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+
+					// leave empty if you want to disable the tracker
 					cookieName: 'gatsby-gdpr-google-analytics', // default
 					anonymize: true, // default
 					head: true,
@@ -31,8 +33,9 @@ module.exports = {
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
-				spaceId: `9ou7fcz5tspg`,
-				accessToken: `DWaTcUoOrT-CuvfvAl9DevbW4ZCRcxVRLkooEL-4lYE`
+				spaceId: process.env.CONTENTFUL_SPACE_ID,
+
+				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 			}
 		},
 		{
