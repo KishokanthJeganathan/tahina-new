@@ -76,11 +76,20 @@ module.exports = {
 				siteUrl: `https://www.tahina.pl`
 			}
 		},
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://www.tahina.pl',
+				sitemap: 'https://tahina.pl/sitemap.xml',
+				policy: [ { userAgent: '*', allow: '/' } ]
+			}
+		},
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-smoothscroll`,
 		`gatsby-plugin-styled-components`,
-		`gatsby-plugin-styled-components`
+		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-sitemap`
 	]
 };
