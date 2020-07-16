@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
 	siteMetadata: {
 		title: 'Tahina',
-		titleTemplate: '%s | Tahina.pl',
+		titleTemplate: '%s | Tahina',
 		description: 'Welcome to Tahina',
-		siteUrl: 'http://localhost:8000', // No trailing slash allowed!
+		siteUrl: 'https://tahina.pl', // No trailing slash allowed!
 		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
 		twitterUsername: '@kishojegan',
 		author: 'Tahina'
