@@ -57,7 +57,7 @@ const TahinaPrivate = ({ data }) => {
 			<AboutUs title={aboutTitle} content={aboutText} />
 			<Philosophy title={area1Title} content={area1Text} image={area1Image} bgColor="#e7eaec" />
 			<Team title={area2Title} content={area2Text} image={area2Image} bgColor="#0eb398b9" />
-			<Philosophy title={area3Title} content={area3Text} image={area3Image} bgColor="#938051b6" />
+			<Philosophy title={area3Title} content={area3Text} image={area3Image} bgColor="#938051" />
 
 			{/* <Form
 				title={formTitle}
