@@ -88,6 +88,7 @@ export default function NewsLetter({
 										type="checkbox"
 										value="1"
 										className={styles.consentButton}
+										required
 									/>
 									{consentText}
 								</Col>
