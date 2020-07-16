@@ -5,12 +5,12 @@ import { Col } from 'react-bootstrap';
 import Layout from '../components/global/layout/Layout';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 
-const NotFoundPage = () => (
+const Thankyou = () => (
 	<Layout>
 		<SEO
-			title="404"
-			description="Przepraszamy, ale nie mamy tu nic do pokazania"
-			image="https://i.ibb.co/gM7Ghhb/Studio-Project.jpg"
+			title="Dzienkuje"
+			description="Dziękujemy za subskrypcję!"
+			image="https://i.ibb.co/T4nfB1c/Landing-page-image.jpg"
 		/>
 		<Col
 			style={{
@@ -22,10 +22,10 @@ const NotFoundPage = () => (
 			}}
 		>
 			<h1>
-				<FormattedMessage id="error" /> <span>😔</span>
+				<FormattedMessage id="newsletter" /> <span>😊🎉</span>
 			</h1>
 		</Col>
 	</Layout>
 );
 
-export default injectIntl(NotFoundPage);
+export default injectIntl(Thankyou);

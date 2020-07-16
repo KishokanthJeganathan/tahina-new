@@ -30,7 +30,7 @@ export default function NewsLetter({
 							<Row className={styles.holder}>
 								<Col xs={12}>
 									<input type="hidden" name="oid" value="00D5I000002tRcD" />
-									<input type="hidden" name="retURL" value="https://tahina.pl/thank-you" />
+									<input type="hidden" name="retURL" value="https://tahina.pl/thankyou" />
 								</Col>
 								<Col xs={12} sm={6} className={styles.firstName}>
 									<label htmlFor="first_name" />
