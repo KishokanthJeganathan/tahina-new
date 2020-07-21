@@ -113,7 +113,7 @@ const Order = () => {
 							)}
 						</Row>
 					</Col>
-					<Col xs={12} className={styles.cart}>
+					<Col xs={12} className={styles.cart} xs="12" md="8">
 						<h2>Your Cart</h2>
 						{console.log(itemsInLocalStorage)}
 					</Col>

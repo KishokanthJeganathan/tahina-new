@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import styles from './orderItem.module.css';
 import { v4 as uuidv4 } from 'uuid';
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 
 export default function OrderItem({ productFamily, addToCart }) {
 	const sendToCart = (selectedItem) => {
