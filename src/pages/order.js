@@ -26,15 +26,9 @@ const Order = () => {
 
 	const addToCart = (selectedItem) => {
 		let array = [ ...cartItems ];
-
-		if (!array.includes(selectedItem)) {
-			array.push(selectedItem);
-
-			localStorage.setItem('cartItems', JSON.stringify(array));
-			setCartItems(array);
-		} else {
-			console.log('Already added');
-		}
+		array.push(selectedItem);
+		localStorage.setItem('cartItems', JSON.stringify(array));
+		setCartItems(array);
 	};
 
 	const divideMenu = () => {
