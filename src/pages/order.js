@@ -10,6 +10,7 @@ import SEO from '../components/global/seo';
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styles from '../components/page-css/order.module.css';
+import { useTable } from 'react-table';
 
 const Order = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
@@ -24,11 +25,21 @@ const Order = () => {
 		fetchData();
 	}, []);
 
+	useEffect(() => {
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+	}, []);
+
 	const addToCart = (selectedItem) => {
-		let array = [ ...cartItems ];
+		let array = [ ...itemsInLocalStorage ];
 		array.push(selectedItem);
 		localStorage.setItem('cartItems', JSON.stringify(array));
 		setCartItems(array);
+	};
+
+	const removeFromcart = (selectedItem) => {
+		let cartWithoutSelectedItem = itemsInLocalStorage.filter((item) => item.name !== selectedItem);
+		localStorage.setItem('cartItems', JSON.stringify(cartWithoutSelectedItem));
+		setCartItems(cartWithoutSelectedItem);
 	};
 
 	const divideMenu = () => {
@@ -88,6 +99,39 @@ const Order = () => {
 		return <OrderItem productFamily={cleanedMenu} addToCart={addToCart} />;
 	};
 
+	const add = () => {
+		let array = [];
+		itemsInLocalStorage.forEach((item) => array.push(item.price));
+		return array.reduce((accumaltor, currentValue) => {
+			return accumaltor + currentValue;
+		}, 0);
+	};
+
+	const table = () => {
+		return (
+			<table>
+				<tbody>
+					{itemsInLocalStorage.map((item) => (
+						<tr>
+							<td className={styles.name}>{item.name}</td>
+							<td className={styles.price}>{item.quantity}</td>
+							<td className={styles.price}>{item.price} </td>
+							<td className={styles.price} onClick={() => removeFromcart(item.name)}>
+								<button> Remove</button>
+							</td>
+						</tr>
+					))}
+					<tr>
+						<td className={styles.total}>Total</td>
+						<td className={styles.total} />
+						<td className={styles.total} />
+						<td className={styles.totalNumber}>{add()}</td>
+					</tr>
+				</tbody>
+			</table>
+		);
+	};
+
 	return (
 		<Layout textColor="white">
 			<Col>
@@ -110,6 +154,7 @@ const Order = () => {
 					<Col xs={12} className={styles.cart} xs="12" md="8">
 						<h2>Your Cart</h2>
 						{console.log(itemsInLocalStorage)}
+						{itemsInLocalStorage && table()}
 					</Col>
 				</Row>
 			</Col>

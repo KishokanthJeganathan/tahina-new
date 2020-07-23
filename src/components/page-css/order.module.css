@@ -1,9 +1,29 @@
 .cart {
-	border: 1px solid black;
-	margin-top: 1rem;
+  border: 1px solid black;
+  margin-top: 1rem;
 }
 
 .quantity {
-	width: 4vh;
-	text-align: center;
+  width: 4vh;
+  text-align: center;
+}
+
+.name {
+  width: 60vw;
+}
+
+.price,
+.number {
+  width: 40vw;
+  text-align: right;
+}
+
+.total {
+  width: 80vw;
+  font-weight: 800;
+}
+
+.total-number {
+  text-align: right;
+  font-weight: 800;
 }

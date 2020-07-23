@@ -21,7 +21,6 @@ export const BlogPost = ({ data }) => {
 		contentOfBlogPost,
 		publishedDate,
 		titleOfPost,
-		slug,
 		readingTime,
 		metaDescription
 	} = data.contentfulAddBlogPost;
