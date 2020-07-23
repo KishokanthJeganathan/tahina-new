@@ -89,7 +89,7 @@ const Menu = () => {
 				<Row className={styles.menuHolder}>
 					<Col className={styles.menu} xs="12" md="8">
 						<h1 className={styles.title}>Tahina Menu</h1>
-						{/* <Link to="order" className={styles.link}>
+						{/* <Link to="/order" className={styles.link}>
 							Order In-store <TiArrowRight />
 						</Link> */}
 						<Row>

@@ -57,12 +57,12 @@ const Navbar = ({ textColor }) => {
 											</Link>
 										</li>
 										<li>
-											<Link to="menu" className={styles.link}>
+											<Link to="/menu" className={styles.link}>
 												{<FormattedMessage id="menu" />}
 											</Link>
 										</li>
 										<li>
-											<Link to="michahummusu" className={styles.link}>
+											<Link to="/michahummusu" className={styles.link}>
 												{<FormattedMessage id="tahinaPrivate" />}
 											</Link>
 										</li>
@@ -72,7 +72,7 @@ const Navbar = ({ textColor }) => {
 											</Link>
 										</li>
 										<li>
-											<Link to="blog" className={styles.link}>
+											<Link to="/blog" className={styles.link}>
 												{<FormattedMessage id="blog" />}
 											</Link>
 										</li>
