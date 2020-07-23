@@ -15,7 +15,7 @@ const Menu = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios('https://tahina-test.herokuapp.com/doggos');
+			const result = await axios('https://tahina-test.herokuapp.com/menu');
 			setMenuItems(result.data);
 		};
 		fetchData();
