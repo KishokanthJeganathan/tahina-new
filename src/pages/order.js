@@ -18,7 +18,7 @@ const Order = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios('https://tahina-test.herokuapp.com/doggos');
+			const result = await axios('https://tahina-test.herokuapp.com/menu');
 			setMenuItems(result.data);
 		};
 		fetchData();
@@ -94,7 +94,7 @@ const Order = () => {
 				<Row className={menuStyles.menuHolder}>
 					<Col className={menuStyles.menu} xs="12" md="8">
 						<h1 className={menuStyles.title}>Tahina Menu</h1>
-						<Link to="menu" className={menuStyles.link}>
+						<Link to="/menu" className={menuStyles.link}>
 							<TiArrowLeft /> Back to Menu
 						</Link>
 						<Row>
