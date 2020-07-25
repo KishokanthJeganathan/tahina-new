@@ -115,7 +115,7 @@ const Order = () => {
 						<tr>
 							<td className={styles.name}>{item.name}</td>
 							<td className={styles.price}>{item.quantity}</td>
-							<td className={styles.price}>{item.price} </td>
+							<td className={styles.price}>{item.price} zł</td>
 							<td className={styles.price} onClick={() => removeFromcart(item.name)}>
 								<button> Remove</button>
 							</td>
@@ -125,7 +125,7 @@ const Order = () => {
 						<td className={styles.total}>Total</td>
 						<td className={styles.total} />
 						<td className={styles.total} />
-						<td className={styles.totalNumber}>{add()}</td>
+						<td className={styles.totalNumber}>{add()} zł</td>
 					</tr>
 				</tbody>
 			</table>
