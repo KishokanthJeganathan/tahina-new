@@ -11,10 +11,14 @@ import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import styles from '../components/page-css/order.module.css';
 import { useTable } from 'react-table';
+import { useForm } from 'react-hook-form';
 
 const Order = () => {
 	const [ menuItems, setMenuItems ] = useState(false);
 	const [ cartItems, setCartItems ] = useState([]);
+	const [ newCustomerForm, setNewCustomerForm ] = useState(false);
+	const { register, handleSubmit } = useForm();
+
 	let itemsInLocalStorage = JSON.parse(localStorage.getItem('cartItems'));
 
 	useEffect(() => {
@@ -132,6 +136,8 @@ const Order = () => {
 		);
 	};
 
+	const onSubmit = (data) => console.log(data);
+
 	return (
 		<Layout textColor="white">
 			<Col>
@@ -155,6 +161,44 @@ const Order = () => {
 						<h2>Your Cart</h2>
 						{console.log(itemsInLocalStorage)}
 						{itemsInLocalStorage && table()}
+						{/* <button className={styles.checkoutBtn} onClick={() => setCheckoutClicked(!checkoutClicked)}>
+							Checkout
+						</button> */}
+						<Row>
+							<Col className={styles.customerType} xs={12}>
+								<button onClick={() => setNewCustomerForm(!newCustomerForm)}>
+									I am a new customer
+								</button>
+								<button>I have shopped in Tahina online before</button>
+							</Col>
+
+							{newCustomerForm && (
+								<Col className={styles.customerType}>
+									<form onSubmit={handleSubmit(onSubmit)}>
+										<input type="text " placeholder="First Name" name="First Name" ref={register} />
+										<input type="text " placeholder="Last Name" name="Last Name" ref={register} />
+										<input type="email " placeholder="Email" name="Email" ref={register} />
+										<input
+											type="tel "
+											placeholder="Phone number"
+											name="Phone number"
+											ref={register}
+										/>
+										<input
+											type="text "
+											placeholder="Mailing Street"
+											name="Mailing Street"
+											ref={register}
+										/>
+										<input type="text " placeholder="Zip Code" name="Zip Code" ref={register} />
+										<input type="text " placeholder="City" namer="City" ref={register} />
+										<input type="text " placeholder="Province" name="Province" ref={register} />
+										<input type="text " placeholder="Country" name="Country" ref={register} />
+										<input type="submit" value="Check Out" />
+									</form>
+								</Col>
+							)}
+						</Row>
 					</Col>
 				</Row>
 			</Col>
