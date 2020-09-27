@@ -25,9 +25,9 @@ export default function Home({ fluid, alt }) {
 								<button className={styles.link} onClick={() => scrollTo('#philosophy')}>
 									{<FormattedMessage id="philosophy" />}
 								</button>
-								<button className={styles.link} onClick={() => scrollTo('#menu')}>
+								{/* <button className={styles.link} onClick={() => scrollTo('#menu')}>
 									{<FormattedMessage id="menu" />}
-								</button>
+								</button> */}
 								<button className={styles.link} onClick={() => scrollTo('#contact')}>
 									{<FormattedMessage id="contact" />}
 								</button>

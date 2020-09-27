@@ -56,11 +56,11 @@ const Navbar = ({ textColor }) => {
 												{<FormattedMessage id="philosophy" />}
 											</Link>
 										</li>
-										<li>
+										{/* <li>
 											<Link to="/menu" className={styles.link}>
 												{<FormattedMessage id="menu" />}
 											</Link>
-										</li>
+										</li> */}
 										<li>
 											<Link to="/michahummusu" className={styles.link}>
 												{<FormattedMessage id="tahinaPrivate" />}

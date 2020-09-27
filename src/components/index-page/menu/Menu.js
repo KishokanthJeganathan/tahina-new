@@ -10,7 +10,8 @@ export default function Menu({ title, content, image, bgColor, link, alt, btnTex
 			<Col>
 				<Row>
 					<Col xs={12} md={6} className={styles.img}>
-						<BackgroundImage fluid={image} alt={alt} slug={link} style={{ height: '60vh' }} />
+						{/* <BackgroundImage fluid={image} alt={alt} slug={link} style={{ height: '60vh' }} /> */}
+						<BackgroundImage fluid={image} alt={alt} slug="/" style={{ height: '60vh' }} />
 					</Col>
 					<Col xs={12} md={6} className={styles.contentHolder} style={{ backgroundColor: bgColor }}>
 						<TextHolder content={content} title={title} link={link} CTA={btnText} />
