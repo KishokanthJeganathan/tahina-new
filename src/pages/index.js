@@ -72,7 +72,6 @@ const IndexPage = ({ data }) => {
 				title={menuTitle}
 				content={menuText}
 				image={menuImageSrc}
-				link={menuLink}
 				alt={menuImageAlt}
 				bgColor="#0eb398b9"
 				btnText={menuBtnText}
