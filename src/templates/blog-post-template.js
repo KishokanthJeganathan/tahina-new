@@ -46,9 +46,9 @@ export const BlogPost = ({ data }) => {
 			'embedded-asset-block': (node) => {
 				return (
 					<img
-						src={node.data.target.fields.file['en-US'].url}
+						src={node.data.target.fields.file['en'].url}
 						className="img-fluid"
-						alt={node.data.target.fields.title['en-US']}
+						alt={node.data.target.fields.title['en']}
 					/>
 				);
 			},
@@ -83,6 +83,8 @@ export const BlogPost = ({ data }) => {
 	};
 
 	const { json } = contentOfBlogPost;
+
+	console.log(json);
 	return (
 		<Layout textColor="white">
 			<SEO title={titleOfPost} description={metaDescription} image={fluid.src} article />
