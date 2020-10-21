@@ -10,10 +10,14 @@ export default function TextHolder({ content, title, bgColor, CTA, link }) {
 				<Col xs={12}>
 					<h2 className={styles.h1}>{title}</h2>
 					<p className={styles.content}>{content}</p>
-					{CTA && (
+					{CTA && link ? (
 						<Link to={link} className={styles.link}>
 							{CTA}
 						</Link>
+					) : (
+						<a href="https://tahina-restaurant.myshopify.com/" className={styles.link}>
+							{CTA}
+						</a>
 					)}
 				</Col>
 			</Row>
