@@ -68,14 +68,14 @@ const IndexPage = ({ data }) => {
 				alt={ourPhilosophyImageAlt}
 				btnText={ourPhilosophyBtnText}
 			/>
-			<Menu
+			{/* <Menu
 				title={menuTitle}
 				content={menuText}
 				image={menuImageSrc}
 				alt={menuImageAlt}
 				bgColor="#0eb398b9"
 				btnText={menuBtnText}
-			/>
+			/> */}
 			<TahinaPrivate
 				title={tahinaPrivateTitle}
 				content={tahinaPrivateText}

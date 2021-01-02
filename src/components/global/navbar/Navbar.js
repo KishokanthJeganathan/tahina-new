@@ -56,11 +56,11 @@ const Navbar = ({ textColor }) => {
 												{<FormattedMessage id="philosophy" />}
 											</Link>
 										</li>
-										<li>
+										{/* <li>
 											<a href="https://tahina-restaurant.myshopify.com/" className={styles.link}>
 												{<FormattedMessage id="menu" />}
 											</a>
-										</li>
+										</li> */}
 										<li>
 											<Link to="/michahummusu" className={styles.link}>
 												{<FormattedMessage id="tahinaPrivate" />}
